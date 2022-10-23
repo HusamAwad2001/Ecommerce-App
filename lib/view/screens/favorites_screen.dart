@@ -36,6 +36,7 @@ class FavoritesScreen extends StatelessWidget {
             );
           } else {
             return ListView.separated(
+              physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
                 return buildFavItems(
                   image: controller.favouritesList[index].image,

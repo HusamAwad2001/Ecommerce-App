@@ -26,10 +26,10 @@ class _DeliveryContinerWidgetState extends State<DeliveryContinerWidget> {
     return Column(
       children: [
         buildRadioContiner(
-          address: "Egypt,sohag medanelshoban el moslmean",
-          name: "asroo store",
-          phone: "51-887-9932",
-          title: "Asroo Shop",
+          address: "Palestine",
+          name: "husam store",
+          phone: "595026281",
+          title: "Husam Shop",
           value: 1,
           color: changeColors ? Colors.white : Colors.grey.shade300,
           icon: Container(),
@@ -157,7 +157,7 @@ class _DeliveryContinerWidgetState extends State<DeliveryContinerWidget> {
     required Widget icon,
   }) {
     return Container(
-      height: 120,
+      height: 140,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -212,7 +212,7 @@ class _DeliveryContinerWidgetState extends State<DeliveryContinerWidget> {
                 ),
                 Row(
                   children: [
-                    const Text('🇪🇬+02 '),
+                    const Text('+970 '),
                     TextUtils(
                       fontSize: 15,
                       fontWeight: FontWeight.normal,

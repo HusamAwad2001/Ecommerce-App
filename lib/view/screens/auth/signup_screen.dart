@@ -1,3 +1,4 @@
+import 'package:ecommerce_cource_asroo/constants/mykeys.dart';
 import 'package:ecommerce_cource_asroo/logic/controllers/auth_controller.dart';
 import 'package:ecommerce_cource_asroo/routes/routes.dart';
 import 'package:ecommerce_cource_asroo/utils/my_string.dart';
@@ -68,6 +69,7 @@ class SignUpScreen extends StatelessWidget {
                           height: 50,
                         ),
                         AuthTextFromField(
+                          key: const Key(MyKeys.SignUpName),
                           controller: nameController,
                           obscureText: false,
                           validator: (value) {
@@ -92,6 +94,7 @@ class SignUpScreen extends StatelessWidget {
                           height: 20,
                         ),
                         AuthTextFromField(
+                          key: const Key(MyKeys.SIGNUPEMAIL),
                           controller: emailController,
                           obscureText: false,
                           validator: (value) {
@@ -117,6 +120,7 @@ class SignUpScreen extends StatelessWidget {
                         GetBuilder<AuthController>(
                           builder: (_) {
                             return AuthTextFromField(
+                              key: const Key(MyKeys.SignUpPassword),
                               controller: passwordController,
                               obscureText:
                                   controller.isVisibilty ? false : true,
@@ -162,6 +166,7 @@ class SignUpScreen extends StatelessWidget {
                         GetBuilder<AuthController>(
                           builder: (_) {
                             return AuthButton(
+                              key: const Key(MyKeys.SignUpButton),
                               onPressed: () {
                                 if (controller.isCheckBox == false) {
                                   Get.snackbar(

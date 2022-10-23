@@ -14,48 +14,91 @@ class ProfileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Obx(
-          () => Row(
-            children: [
-              Container(
-                height: 100,
-                width: 100,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      authController.displayUserPhoto.value,
-                    ),
-                    fit: BoxFit.cover,
-                  ),
+        // Obx(
+        //   () => Row(
+        //     children: [
+        //       Container(
+        //         height: 100,
+        //         width: 100,
+        //         decoration: BoxDecoration(
+        //           color: Colors.white,
+        //           shape: BoxShape.circle,
+        //           image: DecorationImage(
+        //             image: NetworkImage(
+        //               authController.displayUserPhoto.value,
+        //             ),
+        //             fit: BoxFit.cover,
+        //           ),
+        //         ),
+        //       ),
+        //       const SizedBox(
+        //         width: 15,
+        //       ),
+        //       Column(
+        //         crossAxisAlignment: CrossAxisAlignment.start,
+        //         children: [
+        //           TextUtils(
+        //             fontSize: 22,
+        //             fontWeight: FontWeight.bold,
+        //             text: controller
+        //                 .capitalize(authController.displayUserName.value),
+        //             color: Get.isDarkMode ? Colors.white : Colors.black,
+        //             underLine: TextDecoration.none,
+        //           ),
+        //           TextUtils(
+        //             fontSize: 14,
+        //             fontWeight: FontWeight.bold,
+        //             text: authController.displayUserEmail.value,
+        //             color: Get.isDarkMode ? Colors.white : Colors.black,
+        //             underLine: TextDecoration.none,
+        //           ),
+        //         ],
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        Row(
+          children: [
+            Container(
+              height: 100,
+              width: 100,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  // image: NetworkImage(
+                  //   authController.displayUserPhoto.value,
+                  // ),
+                  image: AssetImage('assets/images/profile.png'),
+                  fit: BoxFit.cover,
                 ),
               ),
-              const SizedBox(
-                width: 15,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextUtils(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    text: controller
-                        .capitalize(authController.displayUserName.value),
-                    color: Get.isDarkMode ? Colors.white : Colors.black,
-                    underLine: TextDecoration.none,
-                  ),
-                  TextUtils(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    text: authController.displayUserEmail.value,
-                    color: Get.isDarkMode ? Colors.white : Colors.black,
-                    underLine: TextDecoration.none,
-                  ),
-                ],
-              ),
-            ],
-          ),
+            ),
+            const SizedBox(
+              width: 15,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextUtils(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  // text: controller.capitalize(authController.displayUserName.value),
+                  text: 'Husam Dahliz',
+                  color: Get.isDarkMode ? Colors.white : Colors.black,
+                  underLine: TextDecoration.none,
+                ),
+                TextUtils(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  // text: authController.displayUserEmail.value,
+                  text: 'husam@gmail.com',
+                  color: Get.isDarkMode ? Colors.white : Colors.black,
+                  underLine: TextDecoration.none,
+                ),
+              ],
+            ),
+          ],
         ),
       ],
     );

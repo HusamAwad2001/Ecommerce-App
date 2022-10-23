@@ -31,6 +31,7 @@ class CardItems extends StatelessWidget {
                   ? Image.asset("assets/images/search_empty_dark.png")
                   : Image.asset("assets/images/search_empry_light.png")
               : GridView.builder(
+                  physics: const BouncingScrollPhysics(),
                   itemCount: controller.searchList.isEmpty
                       ? controller.productList.length
                       : controller.searchList.length,

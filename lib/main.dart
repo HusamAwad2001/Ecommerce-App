@@ -16,7 +16,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -29,10 +28,10 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemesApp.dark,
       themeMode: ThemeController().themeDataGet,
       // initialRoute: FirebaseAuth.instance.currentUser != null ||
-      //     GetStorage().read<bool>('auth') == true
-      //     ? AppRoutes.mainSreen
+      //         GetStorage().read<bool>('auth') == true
+      //     ? AppRoutes.mainScreen
       //     : AppRoutes.welcome,
-      initialRoute: AppRoutes.mainScreen,
+      initialRoute: Routes.signUpScreen,
       getPages: AppRoutes.routes,
     );
   }
