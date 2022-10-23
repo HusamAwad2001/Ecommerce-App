@@ -1,6 +1,6 @@
 class MyKeys {
-  static const String SIGNUPEMAIL = "SIGNUPEMAIL";
-  static const String SignUpName = "SignUpName";
-  static const String SignUpPassword = "SignUpPassword";
-  static const String SignUpButton = "SignUpButton";
+  static const String signUpEmail = "SignUpEmail";
+  static const String signUpName = "SignUpName";
+  static const String signUpPassword = "SignUpPassword";
+  static const String signUpButton = "SignUpButton";
 }

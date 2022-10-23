@@ -10,17 +10,27 @@ void main() {
     testWidgets("Sign Up", (tester) async {
       app.main();
       await tester.pumpAndSettle(const Duration(seconds: 1));
+
+      /// Name
+      await tester.enterText(find.byKey(const Key(MyKeys.signUpName)), "Husam");
+      await tester.pumpAndSettle(const Duration(seconds: 1));
+
+      /// Email
       await tester.enterText(
-          find.byKey(const Key(MyKeys.SIGNUPEMAIL)), "teset@example.com");
+          find.byKey(const Key(MyKeys.signUpEmail)), "husam@gmail.com");
       await tester.pumpAndSettle(const Duration(seconds: 1));
-      await tester.enterText(find.byKey(const Key(MyKeys.SignUpName)), "test");
-      await tester.pumpAndSettle(const Duration(seconds: 1));
+
+      /// Password
       await tester.enterText(
-          find.byKey(const Key(MyKeys.SignUpPassword)), "Coding@1234?");
+          find.byKey(const Key(MyKeys.signUpPassword)), "husam123123");
       await tester.pumpAndSettle(const Duration(seconds: 1));
+
+      /// Close Keyboard
       await tester.testTextInput.receiveAction(TextInputAction.done);
       await tester.pumpAndSettle(const Duration(seconds: 1));
-      await tester.tap(find.byKey(const Key(MyKeys.SignUpButton)));
+
+      /// Action Button
+      await tester.tap(find.byKey(const Key(MyKeys.signUpButton)));
       await tester.pumpAndSettle(const Duration(seconds: 1));
     });
   });
